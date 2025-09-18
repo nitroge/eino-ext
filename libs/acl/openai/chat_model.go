@@ -477,7 +477,7 @@ func (c *Client) genRequest(in []*schema.Message, opts ...model.Option) (*openai
 			req.ResponseFormat.JSONSchema = &openai.ChatCompletionResponseFormatJSONSchema{
 				Name:        c.config.ResponseFormat.JSONSchema.Name,
 				Description: c.config.ResponseFormat.JSONSchema.Description,
-				Schema:      c.config.ResponseFormat.JSONSchema.Schema,
+				Schema:      c.config.ResponseFormat.JSONSchema.JSONSchema,
 				Strict:      c.config.ResponseFormat.JSONSchema.Strict,
 			}
 		}
